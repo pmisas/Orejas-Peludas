@@ -10,7 +10,7 @@ public interface PetRepository {
     Pet save(Pet pet);
     Optional<Pet> findById(UUID id);
     List<Pet> findAll();
-    void delete(UUID id);
+    void deleteById(UUID id);
     boolean existById(UUID id);
     
 }

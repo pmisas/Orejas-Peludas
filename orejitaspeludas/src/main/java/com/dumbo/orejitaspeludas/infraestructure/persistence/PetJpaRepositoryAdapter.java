@@ -1,6 +1,5 @@
 package com.dumbo.orejitaspeludas.infraestructure.persistence;
 
-import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -8,7 +7,6 @@ import java.util.UUID;
 import org.springframework.stereotype.Repository;
 
 import com.dumbo.orejitaspeludas.domain.model.Pet;
-import com.dumbo.orejitaspeludas.domain.model.Species;
 import com.dumbo.orejitaspeludas.domain.port.PetRepository;
 
 @Repository
@@ -28,6 +26,7 @@ public class PetJpaRepositoryAdapter implements PetRepository {
         return toDomain(saved);
     }
 
+    @Override
     public Optional<Pet> findById(UUID id){
         return jpaRepository.findById(id)
                 .map(this::toDomain);
@@ -42,7 +41,7 @@ public class PetJpaRepositoryAdapter implements PetRepository {
     }
 
     @Override
-    public void delete(UUID id){
+    public void deleteById(UUID id){
         jpaRepository.deleteById(id);
     }
 

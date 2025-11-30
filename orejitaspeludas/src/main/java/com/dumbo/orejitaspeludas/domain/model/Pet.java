@@ -54,7 +54,7 @@ public class Pet {
                 species);
     }
 
-    public Pet updaPet(String name, 
+    public Pet updatePet(String name, 
                         LocalDate birthDate, 
                         String ownerName,
                         String ownerPhone,
