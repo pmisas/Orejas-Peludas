@@ -117,8 +117,12 @@ public class Pet {
         return this.breed;
     }
 
-    public Species getSpecie(){
+    public Species getSpecies(){
         return this.species;
+    }
+
+    public double getWeightKg(){
+        return this.weightKg;
     }
 
     @Override 
@@ -133,5 +137,6 @@ public class Pet {
     public int hashCode() {
         return java.util.Objects.hashCode(id);
     }
+
 
 }
